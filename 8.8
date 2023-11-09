@@ -1,0 +1,21 @@
+import os
+
+def path_existence_and_split(path):
+    if os.path.exists(path):
+        filename = os.path.basename(path)
+        directory = os.path.dirname(path)
+        return filename, directory
+    else:
+        return "Path does not exist", ""
+
+# Specify the path to be checked
+specified_path = '/path/to/your/file_or_directory'
+
+# Check if the path exists and get filename and directory portion
+filename, directory = path_existence_and_split(specified_path)
+
+if filename != "Path does not exist":
+    print("File/Directory Name:", filename)
+    print("Directory Portion:", directory)
+else:
+    print("The specified path does not exist.")

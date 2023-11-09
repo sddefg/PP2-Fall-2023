@@ -1,0 +1,13 @@
+def copy_file(source_file, destination_file):
+    with open(source_file, 'r') as source:
+        with open(destination_file, 'w') as destination:
+            for line in source:
+                destination.write(line)
+
+# Paths to the source and destination files
+source_file_path = 'source_file.txt'
+destination_file_path = 'destination_file.txt'
+
+# Copy the contents from the source file to the destination file
+copy_file(source_file_path, destination_file_path)
+

@@ -1,0 +1,11 @@
+def write_list_to_file(file_path, list_items):
+    with open(file_path, 'w') as file:
+        for item in list_items:
+            file.write(str(item) + '\n')
+
+# Specify the path for the output file and the list of items
+output_file_path = 'output.txt'
+items_to_write = ['Apple', 'Banana', 'Orange', 'Grapes']
+
+# Write the list to the file
+write_list_to_file(output_file_path, items_to_write)

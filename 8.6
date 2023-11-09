@@ -1,0 +1,26 @@
+
+import os
+
+def list_directories_files(path, show_all=False):
+    if show_all:
+        # List all directories and files in the specified path
+        all_contents = os.listdir(path)
+        print("All directories and files in", path, "are:")
+        for content in all_contents:
+            print(content)
+    else:
+        # List only directories and files separately in the specified path
+        dirs = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
+        files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
+
+        print("Directories in", path, "are:", dirs)
+        print("Files in", path, "are:", files)
+
+       # Specify the path
+           specified_path = '/path/to/your/directory'
+
+# List only directories and files
+           list_directories_files(specified_path)
+
+# List all directories and files
+list_directories_files(specified_path, show_all=True)
