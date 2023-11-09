@@ -1,0 +1,13 @@
+def snake_to_camel(snake_str):
+    components = snake_str.split('_')
+    return components[0] + ''.join(x.title() for x in components[1:])
+
+# Test snake case string
+snake_case_string = 'this_is_snake_case'
+
+# Convert snake case string to camel case
+camel_case_string = snake_to_camel(snake_case_string)
+
+print("Snake Case String:", snake_case_string)
+print("Camel Case String:", camel_case_string)
+

@@ -1,0 +1,14 @@
+import re
+
+def split_at_uppercase(input_string):
+    split_string = re.sub(r"([A-Z])", r" \1", input_string).split()
+    return split_string
+
+# Test string
+test_string = "SplitThisStringAtUpperCaseLetters"
+
+# Split the string at uppercase letters
+result = split_at_uppercase(test_string)
+
+print("Original String:", test_string)
+print("Split at Uppercase Letters:", result)

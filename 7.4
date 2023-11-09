@@ -1,0 +1,15 @@
+import re
+
+def find_sequences(input_string):
+    pattern = r'[A-Z][a-z]+'  # Sequence of one uppercase letter followed by lowercase letters
+
+    sequences = re.findall(pattern, input_string)
+    return sequences
+
+# Test string
+test_string = "Testing Uppercase Sequences aBcDeFgH"
+
+# Find sequences of one uppercase letter followed by lowercase letters
+result = find_sequences(test_string)
+
+print("Sequences found:", result)

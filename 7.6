@@ -1,0 +1,17 @@
+import re
+
+def replace_with_colon(input_string):
+    pattern = r'[ ,.]'  # Matches space, comma, or dot
+
+    replaced_string = re.sub(pattern, ':', input_string)
+    return replaced_string
+
+# Test string
+test_string = "Replace, spaces. and commas with: colons"
+
+# Replace all spaces, commas, and dots with a colon
+result = replace_with_colon(test_string)
+
+print("Original String:", test_string)
+print("Replaced String:", result)
+

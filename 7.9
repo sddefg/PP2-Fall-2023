@@ -1,0 +1,14 @@
+import re
+
+def insert_spaces(input_string):
+    new_string = re.sub(r'(?<!^)(?=[A-Z])', ' ', input_string)
+    return new_string
+
+# Test string
+test_string = "InsertSpacesBetweenWordsStartingWithCapitalLetters"
+
+# Insert spaces between words starting with capital letters
+result = insert_spaces(test_string)
+
+print("Original String:", test_string)
+print("Modified String:", result)

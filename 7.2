@@ -1,0 +1,21 @@
+import re
+
+def match_pattern(input_string):
+    pattern = 'ab{2,3}'  # 'a' followed by 2 to 3 'b's
+
+    if re.search(pattern, input_string):
+        return True
+    else:
+        return False
+
+# Test strings
+test_string1 = 'abb'
+test_string2 = 'abbb'
+test_string3 = 'abbbb'
+test_string4 = 'a'
+
+# Check if the string matches the pattern
+print("String:", test_string1, " Matched:", match_pattern(test_string1))
+print("String:", test_string2, " Matched:", match_pattern(test_string2))
+print("String:", test_string3, " Matched:", match_pattern(test_string3))
+print("String:", test_string4, " Matched:", match_pattern(test_string4))

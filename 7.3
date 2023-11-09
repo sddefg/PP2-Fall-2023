@@ -1,0 +1,15 @@
+import re
+
+def find_sequences(input_string):
+    pattern = r'[a-z]+_[a-z]+'  # Sequence of lowercase letters joined by underscore
+
+    sequences = re.findall(pattern, input_string)
+    return sequences
+
+# Test string
+test_string = "this_is_a_test with_multiple_sequences abc_def_ghi"
+
+# Find sequences of lowercase letters joined with an underscore
+result = find_sequences(test_string)
+
+print("Sequences found:", result)
