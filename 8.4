@@ -1,0 +1,29 @@
+import time
+import math
+
+def calculate_square_root_after_milliseconds(number, milliseconds):
+    time.sleep(milliseconds / 1000)  # Convert milliseconds to seconds
+    result = math.sqrt(number)
+    return result
+
+# Sample Input
+input_number = 25100
+input_milliseconds = 2123
+
+# Calculate square root after the specified milliseconds
+result = calculate_square_root_after_milliseconds(input_number, input_milliseconds)
+
+print(f"Square root of {input_number} after {input_milliseconds} milliseconds is {result}")
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
