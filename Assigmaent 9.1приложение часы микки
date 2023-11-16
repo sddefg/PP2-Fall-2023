@@ -1,0 +1,25 @@
+
+import pygame
+import datetime
+
+
+pygame.init()
+
+
+minute_hand = pygame.image.load('min_hand.png')
+second_hand = pygame.image.load('sec_hand.png')
+
+def get_rotation_angles():
+    current_time = datetime.datetime.now()
+    minute_angle = (current_time.minute / 60) * 360
+    second_angle = (current_time.second / 60) * 360
+    return minute_angle, second_angle
+
+def draw_clock():
+    minute_angle, second_angle = get_rotation_angles()
+    rotated_minute_hand = pygame.transform.rotate(minute_hand, minute_angle)
+    rotated_second_hand = pygame.transform.rotate(second_hand, second_angle)
+
+while True:
+ 
+    draw_clock()
